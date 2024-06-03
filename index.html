@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6f7e225adb.js" crossorigin="anonymous"></script>+
+</head>
+<body>
+<div id="header">
+    <div></div>
+    <div class="container">
+        <nav class="nav">
+            <img src="vam.png" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text" id="home">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Vamshi Krishna </span><br>currently working as a web developer in Cinereous Technology.</h1>
+        </div>
+    </div>
+</div>
+<!---------------------------about------------------------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Vamshi.png.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm Vamshi, hailing from Peddapalli but now residing in Hyderabad.There are four people in my family father, mother, and elder brother. My father is a farmer, My mother enjoys watching TV serials, my family is friendly and supportive with my brother and with me as well. My favourite food is biryani. In my free time, i enjoy watching movies,listining music, and playing mobile games. That's all about me.</p>
+                
+                <div class="my-work">
+                    <p class="work active" onclick="opentab('skills')">Skills</p>
+                    <p class="work" onclick="opentab('experience')">Experience</p>
+                    <p class="work" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="work-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JAVASCRIPT</span></li>
+                        <li><span>REACT.JS</span></li>
+                        <li><span>NODE.JS</span></li>
+                        <li><span>PHYTON</span></li>
+                    </ul>
+                </div>
+                <div class="work-contents" id="experience">
+                    <ul>
+                        <li><span>2024 - Current</span><br>Web Developer Training at Cinereous Technologies</li>
+                    </ul>
+                </div>
+                <div class="work-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>JB Institute of Engineering and Technology(B.Tech)</li>
+                        <li><span>2019</span><br>Sri Gayatri Junior College(MPC)</li>
+                        <li><span>2017</span><br>Trinity Model Secondary School(School)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------services---------------------->
+<div id="services">
+    <div class="container">
+        <div class="row">
+        <h1 class="sub-title">My Services & Skills</h1>
+        <p class="para">Present working as a web developer in cinereous Technologies</p>
+        <ul>
+            <li><i class="fa-brands fa-html5"></i><span>HTML</span></li>
+            <li><i class="fa-brands fa-css3-alt"></i><span>CSS</span></li>
+            <li><i class="fa-brands fa-js"></i><span>JAVASCRIPT</span></li>
+            <li><i class="fa-brands fa-react"></i><span>REACT.JS</span></li>
+            <li><i class="fa-brands fa-node-js"></i><span>NODE.JS</span></li>
+            <li><i class="fa-brands fa-python"></i><span>PHYTON</span></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!----------------------------------contact-------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>vamshigajangi009@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>8686150151</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/vamshi.sunny.032"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/vamshisunny8267/status/1796113420745408991?s=46"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/__sunnyyy_250/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vamshigajangi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="vamshi-resume.pdf" download class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+    <p class="copyright">Copyright @ Vamshi<i class="fa-solid fa-heart"></i>.</p>
+    </div>
+</div>
+<script>
+    var works = document.getElementsByClassName("work");
+    var workcontents = document.getElementsByClassName("work-contents");
+
+    function opentab(tabname){
+        for(work of works){
+            work.classList.remove("active");
+        }
+        for(workcontent of workcontents){
+            workcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
